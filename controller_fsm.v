@@ -138,7 +138,7 @@ module controller_fsm(
         op_type = 4'b0000;
 
         // 只有在菜单、选择、计算或显示状态才显示 op_type
-        if (state == S1_MENU || state == S8_SELECT || state == S5_COMPUTE || state == S4_DISPLAY) begin
+        if ( state == S8_SELECT ) begin
             case(mode_sel)
                 4'b0001: op_type = 4'b0001; // 转置
                 4'b0010: op_type = 4'b0010; // 加法
